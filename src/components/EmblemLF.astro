@@ -1,0 +1,38 @@
+---
+// Emblema circular del diseño (texto orbitando un óvalo + monograma central),
+// adaptado al casamiento: monograma L·F y frase en español.
+interface Props {
+	class?: string;
+}
+const { class: className } = Astro.props;
+const frase = 'DE NUESTRO COMPROMISO AL GRAN DÍA · GRACIAS POR ACOMPAÑARNOS EN CADA PASO ·';
+---
+
+<svg
+	viewBox="0 0 326 437"
+	fill="none"
+	class={className}
+	role="img"
+	aria-label={`Sello circular con el monograma LF rodeado por el texto: ${frase}`}
+>
+	<defs>
+		<path id="emblem-orbit" d="M163,10 a153,208 0 1,1 -0.1,0" fill="none"></path>
+	</defs>
+	<text
+		font-family="Cormorant Garamond, Didot, Times New Roman, serif"
+		font-size="15.5"
+		letter-spacing="3.4"
+		fill="currentColor"
+	>
+		<textPath href="#emblem-orbit" startOffset="1%">{frase}</textPath>
+	</text>
+	<g
+		font-family="Cormorant Garamond, Didot, Times New Roman, serif"
+		font-weight="300"
+		font-size="150"
+		fill="currentColor"
+	>
+		<text x="88" y="240">L</text>
+		<text x="150" y="330">F</text>
+	</g>
+</svg>

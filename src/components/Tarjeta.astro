@@ -1,0 +1,56 @@
+---
+---
+
+<section id="tarjeta" class="bg-mist px-6 py-24 lg:py-[139px]">
+	<div class="mx-auto max-w-[731px]">
+		<h2 class="font-display text-[26px] font-semibold">Valor de la tarjeta</h2>
+		<p class="mt-10 font-display text-[clamp(3rem,9vw,5.5rem)] leading-none font-light">
+			$65.000
+		</p>
+		<p
+			class="mt-4 flex flex-col gap-2 text-[11px] tracking-[0.3em] uppercase sm:flex-row sm:items-center sm:gap-4 sm:text-[13px]"
+		>
+			<span>Julio a septiembre</span>
+			<span class="hidden h-px w-8 bg-black sm:block sm:w-14" aria-hidden="true"></span>
+			<span>Se ajusta por inflación (IPC)</span>
+		</p>
+		<p class="mt-8 text-[19px] leading-normal tracking-[-0.01em] sm:text-[21px]">
+			Podés abonarla por transferencia al siguiente alias. Quienes quieran abonar con tarjeta de
+			crédito, escribinos en privado y armamos un link de pago.
+		</p>
+
+		{/* TODO: reemplazar por el alias real de la cuenta. */}
+		<div
+			class="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
+			id="bloque-alias"
+			data-alias="ALIAS.PENDIENTE"
+		>
+			<p class="border border-black/20 bg-white px-6 py-3 font-mono text-[15px] tracking-[0.08em] sm:text-[17px]">
+				ALIAS.PENDIENTE
+			</p>
+			<button
+				type="button"
+				id="copiar-alias"
+				class="border border-black px-8 py-3 text-[11px] tracking-[0.3em] uppercase transition-colors hover:bg-black hover:text-white"
+			>
+				Copiar alias
+			</button>
+		</div>
+	</div>
+</section>
+
+<script>
+	function iniciarCopiarAlias() {
+		const bloque = document.getElementById('bloque-alias');
+		const boton = document.getElementById('copiar-alias');
+		if (!bloque || !boton) return;
+		boton.addEventListener('click', async () => {
+			await navigator.clipboard.writeText(bloque.dataset.alias!);
+			const original = boton.textContent;
+			boton.textContent = '¡Copiado!';
+			setTimeout(() => (boton.textContent = original), 2000);
+		});
+	}
+	iniciarCopiarAlias();
+	document.addEventListener('astro:page-load', iniciarCopiarAlias);
+</script>

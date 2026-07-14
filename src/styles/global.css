@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/*
+  Tipografías del diseño (Figma):
+  - Títulos/logo "EDEN ROSE": "The Seasons" (Fontspring, de pago).
+    Alternativa gratuita más parecida: Cormorant Garamond Light (Google Fonts).
+  - Cuerpo: Calibri. Alternativa libre métricamente compatible: Carlito (Google Fonts).
+*/
+@theme {
+  --font-display: "Cormorant Garamond", "Didot", "Times New Roman", serif;
+  --font-body: "Carlito", "Calibri", "Segoe UI", sans-serif;
+
+  /* Paleta exacta del diseño */
+  --color-mist: #f2f2f2;
+  --color-ink: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
