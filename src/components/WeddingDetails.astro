@@ -20,29 +20,57 @@
 			Elegante
 		</p>
 
-		{/*
-			TODO: reemplazar la URL del iframe por el embed exacto del salón
-			(Google Maps → Compartir → Insertar un mapa) cuando esté la dirección.
-		*/}
+		<p class="mt-10 text-[11px] tracking-[0.3em] uppercase opacity-70">Ubicación</p>
+		<p class="mt-2 text-[19px] sm:text-[21px]">
+			Camino Dr. Carlos Obligado — Ramallo, Buenos Aires
+		</p>
+
 		<div
-			class="mt-12 aspect-[4/3] overflow-hidden rounded-[2rem] border border-black/15 sm:aspect-[16/9] lg:rounded-[3rem]"
+			class="mt-10 aspect-[4/3] overflow-hidden rounded-[2rem] border border-black/15 sm:aspect-[16/9] lg:rounded-[3rem]"
 		>
 			<iframe
-				title="Mapa con la ubicación del evento: Salón Catering Tita"
-				src="https://www.google.com/maps?q=Sal%C3%B3n%20Catering%20Tita&output=embed"
+				title="Mapa con la ubicación del evento: Salón Catering Tita, Ramallo"
+				src="https://www.google.com/maps?q=-33.494440,-59.991723&z=15&output=embed"
 				class="h-full w-full border-0"
 				loading="lazy"
 				allowfullscreen
 				referrerpolicy="no-referrer-when-downgrade"
 			></iframe>
 		</div>
+
+		<div class="mx-auto mt-12 max-w-[620px] text-left">
+			<p
+				class="flex items-center justify-center gap-4 text-[11px] tracking-[0.3em] uppercase sm:gap-8"
+			>
+				<span class="h-px w-8 bg-black sm:w-14" aria-hidden="true"></span>
+				<span>Cómo llegar</span>
+				<span class="h-px w-8 bg-black sm:w-14" aria-hidden="true"></span>
+			</p>
+			<ul class="mt-8 space-y-5 text-[17px] leading-normal tracking-[-0.01em] sm:text-[19px]">
+				<li>
+					<strong class="font-bold">Desde la autopista Buenos Aires–Rosario (RN9):</strong>
+					tomá la salida Ramallo (km 205) y seguí por la Ruta Provincial 51 hacia el río,
+					pasando Villa Ramallo, hasta entrar a Ramallo (unos 12 km).
+				</li>
+				<li>
+					<strong class="font-bold">Ya en Ramallo:</strong> el salón está en el acceso sureste
+					de la ciudad, sobre el camino Dr. Carlos Obligado, camino a la zona costanera. Tocá
+					el botón de abajo y el GPS te lleva hasta la puerta.
+				</li>
+				<li>
+					<strong class="font-bold">Referencias:</strong> desde San Nicolás son unos 30
+					minutos; desde San Pedro, unos 40 minutos por autopista.
+				</li>
+			</ul>
+		</div>
+
 		<a
-			href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n%20Catering%20Tita"
+			href="https://maps.app.goo.gl/JHYhxaz5i2PJ7pb98"
 			target="_blank"
 			rel="noopener"
-			class="mt-8 inline-block border border-black px-8 py-3 text-[11px] tracking-[0.3em] uppercase transition-colors hover:bg-black hover:text-white"
+			class="mt-10 inline-block border border-black px-8 py-3 text-[11px] tracking-[0.3em] uppercase transition-colors hover:bg-black hover:text-white"
 		>
-			Cómo llegar
+			Abrir en Google Maps
 		</a>
 	</div>
 </section>
