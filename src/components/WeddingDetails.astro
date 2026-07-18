@@ -1,76 +1,69 @@
 ---
+import { Image } from 'astro:assets';
+import retrato from '../assets/couple-9.jpg';
 ---
 
-<section id="evento" class="bg-white px-6 py-24 lg:py-[139px]">
-	<div class="mx-auto max-w-[731px] text-center">
-		<h2 class="font-display text-[clamp(2.6rem,8vw,5.5rem)] leading-none font-light">
-			El gran día
-		</h2>
-		<p class="mt-8 text-[19px] sm:text-[21px]">Domingo 7 de febrero — 19 hs</p>
-		<p
-			class="mt-4 flex items-center justify-center gap-4 text-[11px] tracking-[0.3em] uppercase sm:gap-8 sm:text-sm"
-		>
-			<span class="h-px w-8 bg-black sm:w-14" aria-hidden="true"></span>
-			<span>Salón Catering Tita</span>
-			<span class="h-px w-8 bg-black sm:w-14" aria-hidden="true"></span>
-		</p>
+<section id="evento" class="bg-porcelain px-6 py-24 lg:py-[132px]">
+	<div class="mx-auto grid max-w-[1120px] gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20">
+		<div>
+			<p class="text-[11px] tracking-[0.32em] uppercase text-blush">El gran día</p>
+			<h2 class="mt-5 font-display text-[clamp(2.8rem,7vw,5.5rem)] leading-none font-light">
+				Nos vemos en Ramallo
+			</h2>
 
-		<p class="mt-10 text-[11px] tracking-[0.3em] uppercase opacity-70">Dress code</p>
-		<p class="mt-2 font-display text-[clamp(1.6rem,4vw,2.4rem)] leading-none font-light">
-			Elegante
-		</p>
+			<div class="mt-10 grid gap-4 sm:grid-cols-2">
+				<div class="border-t border-black/20 pt-5">
+					<p class="text-[10px] tracking-[0.3em] uppercase text-ink/55">Cuándo</p>
+					<p class="mt-3 text-[20px] leading-tight sm:text-[22px]">Domingo 7 de febrero · 19 hs</p>
+				</div>
+				<div class="border-t border-black/20 pt-5">
+					<p class="text-[10px] tracking-[0.3em] uppercase text-ink/55">Dónde</p>
+					<p class="mt-3 text-[20px] leading-tight sm:text-[22px]">Salón Catering Tita</p>
+				</div>
+				<div class="border-t border-black/20 pt-5">
+					<p class="text-[10px] tracking-[0.3em] uppercase text-ink/55">Dirección</p>
+					<p class="mt-3 text-[20px] leading-tight sm:text-[22px]">
+						Camino Dr. Carlos Obligado, Ramallo
+					</p>
+				</div>
+				<div class="border-t border-black/20 pt-5">
+					<p class="text-[10px] tracking-[0.3em] uppercase text-ink/55">Vestimenta</p>
+					<p class="mt-3 text-[20px] leading-tight sm:text-[22px]">Elegante</p>
+				</div>
+			</div>
 
-		<p class="mt-10 text-[11px] tracking-[0.3em] uppercase opacity-70">Ubicación</p>
-		<p class="mt-2 text-[19px] sm:text-[21px]">
-			Camino Dr. Carlos Obligado — Ramallo, Buenos Aires
-		</p>
-
-		<div
-			class="mt-10 aspect-[4/3] overflow-hidden rounded-[2rem] border border-black/15 sm:aspect-[16/9] lg:rounded-[3rem]"
-		>
-			<iframe
-				title="Mapa con la ubicación del evento: Salón Catering Tita, Ramallo"
-				src="https://www.google.com/maps?q=-33.494440,-59.991723&z=15&output=embed"
-				class="h-full w-full border-0"
-				loading="lazy"
-				allowfullscreen
-				referrerpolicy="no-referrer-when-downgrade"
-			></iframe>
-		</div>
-
-		<div class="mx-auto mt-12 max-w-[620px] text-left">
-			<p
-				class="flex items-center justify-center gap-4 text-[11px] tracking-[0.3em] uppercase sm:gap-8"
+			<a
+				href="https://maps.app.goo.gl/JHYhxaz5i2PJ7pb98"
+				target="_blank"
+				rel="noopener"
+				class="mt-10 inline-block border border-black px-8 py-3 text-[11px] tracking-[0.3em] uppercase transition-colors hover:bg-black hover:text-white"
 			>
-				<span class="h-px w-8 bg-black sm:w-14" aria-hidden="true"></span>
-				<span>Cómo llegar</span>
-				<span class="h-px w-8 bg-black sm:w-14" aria-hidden="true"></span>
-			</p>
-			<ul class="mt-8 space-y-5 text-[17px] leading-normal tracking-[-0.01em] sm:text-[19px]">
-				<li>
-					<strong class="font-bold">Desde la autopista Buenos Aires–Rosario (RN9):</strong>
-					tomá la salida Ramallo (km 205) y seguí por la Ruta Provincial 51 hacia el río,
-					pasando Villa Ramallo, hasta entrar a Ramallo (unos 12 km).
-				</li>
-				<li>
-					<strong class="font-bold">Ya en Ramallo:</strong> el salón está en el acceso sureste
-					de la ciudad, sobre el camino Dr. Carlos Obligado, camino a la zona costanera. Tocá
-					el botón de abajo y el GPS te lleva hasta la puerta.
-				</li>
-				<li>
-					<strong class="font-bold">Referencias:</strong> desde San Nicolás son unos 30
-					minutos; desde San Pedro, unos 40 minutos por autopista.
-				</li>
-			</ul>
+				Abrir en Google Maps
+			</a>
 		</div>
 
-		<a
-			href="https://maps.app.goo.gl/JHYhxaz5i2PJ7pb98"
-			target="_blank"
-			rel="noopener"
-			class="mt-10 inline-block border border-black px-8 py-3 text-[11px] tracking-[0.3em] uppercase transition-colors hover:bg-black hover:text-white"
-		>
-			Abrir en Google Maps
-		</a>
+		<div class="grid gap-4 sm:grid-cols-[0.78fr_1fr]">
+			<div class="aspect-[3/4] overflow-hidden rounded-t-full bg-mist">
+				<Image
+					src={retrato}
+					alt="Lucía y Fausto abrazados en el campo"
+					class="h-full w-full object-cover object-[48%_46%]"
+					widths={[420, 640, 900, 1050]}
+					sizes="(min-width: 1024px) 24vw, 100vw"
+					quality={80}
+					loading="lazy"
+				/>
+			</div>
+			<div class="aspect-[4/5] overflow-hidden rounded-[1.25rem] border border-black/10 bg-white sm:rounded-[1.75rem]">
+				<iframe
+					title="Mapa con la ubicación del evento: Salón Catering Tita, Ramallo"
+					src="https://www.google.com/maps?q=-33.494440,-59.991723&z=15&output=embed"
+					class="h-full w-full border-0 grayscale"
+					loading="lazy"
+					allowfullscreen
+					referrerpolicy="no-referrer-when-downgrade"
+				></iframe>
+			</div>
+		</div>
 	</div>
 </section>

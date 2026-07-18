@@ -1,38 +1,46 @@
 ---
 import { Image } from 'astro:assets';
-import miradas from '../assets/couple-4.jpg';
-
-/*
-	TODO: reemplazar los textos entre corchetes por la historia real
-	(cómo se conocieron, la propuesta, fechas importantes).
-*/
+import sentados from '../assets/couple-6.jpg';
+import detalleAnillo from '../assets/couple-10.jpg';
 ---
 
-<section id="nuestra-historia" class="bg-white">
-	<div class="grid md:grid-cols-2">
-		<div class="aspect-[4/5] overflow-hidden md:aspect-auto">
-			<Image
-				src={miradas}
-				alt="Lucía y Fausto abrazados mirándose a los ojos en el campo, en blanco y negro"
-				class="h-full w-full object-cover grayscale"
-				widths={[640, 1024, 1600]}
-				sizes="(min-width: 768px) 50vw, 100vw"
-				quality={80}
-				loading="lazy"
-			/>
+<section id="nuestra-historia" class="bg-white px-6 py-24 lg:py-[132px]">
+	<div class="mx-auto grid max-w-[1120px] items-center gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-20">
+		<div>
+			<p class="text-[11px] tracking-[0.32em] uppercase text-bluebell">Nuestra historia</p>
+			<h2 class="mt-5 font-display text-[clamp(2.4rem,6vw,4.8rem)] leading-none font-light">
+				Todo lo importante se construye de a dos
+			</h2>
+			<p class="mt-8 max-w-[650px] text-[19px] leading-normal sm:text-[21px]">
+				Llegamos a este día con la alegría de elegirnos todos los días. Por eso queremos que la
+				fiesta sea simple, cercana y llena de abrazos: una mesa compartida, música, familia,
+				amigos y ese momento que vamos a recordar para siempre.
+			</p>
+			<div class="mt-10 h-px w-full max-w-[360px] bg-black/15" aria-hidden="true"></div>
 		</div>
-		<div class="flex items-center px-6 py-24 sm:px-12 lg:px-20 lg:py-[139px]">
-			<div class="max-w-[520px]">
-				<p class="text-[11px] tracking-[0.3em] uppercase opacity-70">Nuestra historia</p>
-				<h2 class="mt-5 font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-tight font-light">
-					Todo empezó mucho antes de este día
-				</h2>
-				<p class="mt-8 text-[19px] leading-normal tracking-[-0.01em] sm:text-[21px]">
-					[Cómo nos conocimos: contanos dónde y cuándo empezó todo, y lo completamos acá.]
-				</p>
-				<p class="mt-6 text-[19px] leading-normal tracking-[-0.01em] sm:text-[21px]">
-					[La propuesta: el momento en que decidimos casarnos.]
-				</p>
+
+		<div class="grid grid-cols-[0.9fr_1fr] items-end gap-4 sm:gap-6">
+			<div class="aspect-[3/4] overflow-hidden rounded-t-full bg-mist">
+				<Image
+					src={detalleAnillo}
+					alt="Detalle de las manos de Lucía y Fausto con el anillo"
+					class="h-full w-full object-cover object-[52%_50%]"
+					widths={[360, 520, 760]}
+					sizes="(min-width: 1024px) 24vw, 45vw"
+					quality={80}
+					loading="lazy"
+				/>
+			</div>
+			<div class="aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-mist sm:rounded-[1.75rem]">
+				<Image
+					src={sentados}
+					alt="Lucía y Fausto sentados en el pasto mirándose"
+					class="h-full w-full object-cover object-[53%_52%]"
+					widths={[480, 760, 1040, 1400]}
+					sizes="(min-width: 1024px) 31vw, 55vw"
+					quality={82}
+					loading="lazy"
+				/>
 			</div>
 		</div>
 	</div>

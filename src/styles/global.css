@@ -10,11 +10,23 @@
   --font-display: "Cormorant Garamond", "Didot", "Times New Roman", serif;
   --font-body: "Carlito", "Calibri", "Segoe UI", sans-serif;
 
-  /* Paleta exacta del diseño */
-  --color-mist: #f2f2f2;
+  --color-porcelain: #faf8f3;
+  --color-mist: #f0f0ec;
+  --color-sage: #7c8b6f;
+  --color-bluebell: #8ea4bd;
+  --color-blush: #d8b7ad;
   --color-ink: #000000;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background: #faf8f3;
+}
+
+::selection {
+  background: #d8b7ad;
+  color: #000;
 }

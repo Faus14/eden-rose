@@ -6,13 +6,13 @@ const mensaje = encodeURIComponent(
 const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
 ---
 
-<section id="confirmar" class="bg-mist px-6 py-24 lg:py-[139px]">
+<section id="confirmar" class="bg-black px-6 py-24 text-white lg:py-[132px]">
 	<div class="mx-auto max-w-[731px] text-center">
-		<p class="text-[11px] tracking-[0.3em] uppercase opacity-70">RSVP</p>
+		<p class="text-[11px] tracking-[0.3em] uppercase text-white/65">Confirmación</p>
 		<h2 class="mt-5 font-display text-[clamp(2.4rem,7vw,4.5rem)] leading-none font-light">
 			Confirmá tu asistencia
 		</h2>
-		<p class="mt-8 text-[19px] leading-normal tracking-[-0.01em] sm:text-[21px]">
+		<p class="mt-8 text-[19px] leading-normal text-white/85 sm:text-[21px]">
 			Tu presencia es lo más importante para nosotros. Escribinos por WhatsApp indicando tu nombre
 			y cuántas personas vienen con vos.
 		</p>
@@ -20,7 +20,7 @@ const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
 			href={linkWhatsApp}
 			target="_blank"
 			rel="noopener"
-			class="mt-10 inline-block border border-black px-8 py-3 text-[11px] tracking-[0.3em] uppercase transition-colors hover:bg-black hover:text-white"
+			class="mt-10 inline-block border border-white px-8 py-3 text-[11px] tracking-[0.3em] uppercase transition-colors hover:bg-white hover:text-black"
 		>
 			Confirmar por WhatsApp
 		</a>

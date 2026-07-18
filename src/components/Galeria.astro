@@ -4,36 +4,74 @@ import couple from '../assets/couple.jpg';
 import manos from '../assets/couple-2.jpg';
 import abrazo from '../assets/couple-3.jpg';
 import miradas from '../assets/couple-4.jpg';
-
-// TODO: confirmar el hashtag definitivo con Lucía y Fausto.
-const hashtag = '#LuciaYFausto';
+import campo from '../assets/couple-5.jpg';
+import sentados from '../assets/couple-6.jpg';
+import abrazoColor from '../assets/couple-7.jpg';
+import miradaCampo from '../assets/couple-8.jpg';
+import retrato from '../assets/couple-9.jpg';
+import anillo from '../assets/couple-10.jpg';
 
 const fotos = [
 	{
+		src: abrazoColor,
+		alt: 'Lucía sonriendo mientras abraza a Fausto en el campo',
+		class: 'sm:col-span-2 sm:row-span-2',
+	},
+	{
+		src: anillo,
+		alt: 'Detalle de las manos de Lucía y Fausto con el anillo',
+		class: '',
+	},
+	{
+		src: sentados,
+		alt: 'Lucía y Fausto sentados en el pasto mirándose',
+		class: '',
+	},
+	{
+		src: retrato,
+		alt: 'Lucía y Fausto abrazados en el campo',
+		class: '',
+	},
+	{
+		src: miradaCampo,
+		alt: 'Fausto abrazando a Lucía en el campo',
+		class: '',
+	},
+	{
+		src: campo,
+		alt: 'Lucía y Fausto sonriendo y abrazados bajo los árboles',
+		class: 'sm:col-span-2',
+	},
+	{
 		src: couple,
 		alt: 'Lucía y Fausto abrazados frente a frente bajo los árboles de un campo',
+		class: '',
 	},
-	{ src: miradas, alt: 'Lucía y Fausto mirándose a los ojos' },
-	{ src: manos, alt: 'Las manos de Lucía y Fausto entrelazadas, con el anillo de compromiso' },
-	{ src: abrazo, alt: 'Lucía apoyada en el pecho de Fausto, abrazados en el campo' },
+	{ src: miradas, alt: 'Lucía y Fausto mirándose a los ojos', class: '' },
+	{
+		src: manos,
+		alt: 'Las manos de Lucía y Fausto entrelazadas, con el anillo de compromiso',
+		class: '',
+	},
+	{ src: abrazo, alt: 'Lucía apoyada en el pecho de Fausto, abrazados en el campo', class: '' },
 ];
 ---
 
-<section id="galeria" class="bg-white px-6 py-24 lg:py-[139px]">
-	<div class="mx-auto max-w-[1100px] text-center">
-		<p class="text-[11px] tracking-[0.3em] uppercase opacity-70">Galería</p>
+<section id="galeria" class="bg-white px-6 py-24 lg:py-[132px]">
+	<div class="mx-auto max-w-[1120px] text-center">
+		<p class="text-[11px] tracking-[0.3em] uppercase text-bluebell">Galería</p>
 		<h2 class="mt-5 font-display text-[clamp(2.4rem,7vw,4.5rem)] leading-none font-light">
 			Recuerdos que ya son nuestros
 		</h2>
 
-		<div class="mt-14 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+		<div class="mt-14 grid auto-rows-[180px] grid-cols-2 gap-3 sm:auto-rows-[210px] sm:gap-5 lg:grid-cols-4 lg:auto-rows-[250px]">
 			{
 				fotos.map((foto) => (
-					<div class="aspect-[3/4] overflow-hidden rounded-[1.25rem]">
+					<div class:list={['overflow-hidden rounded-[1.25rem] bg-mist sm:rounded-[1.75rem]', foto.class]}>
 						<Image
 							src={foto.src}
 							alt={foto.alt}
-							class="h-full w-full object-cover grayscale transition-transform duration-700 hover:scale-105"
+							class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 							widths={[480, 800, 1200]}
 							sizes="(min-width: 1024px) 25vw, 50vw"
 							quality={75}
@@ -44,11 +82,5 @@ const fotos = [
 			}
 		</div>
 
-		<p class="mt-14 text-[19px] leading-normal tracking-[-0.01em] sm:text-[21px]">
-			El día de la fiesta, compartí tus fotos en Instagram con el hashtag
-		</p>
-		<p class="mt-4 font-display text-[clamp(1.8rem,5vw,3rem)] leading-none font-light">
-			{hashtag}
-		</p>
 	</div>
 </section>

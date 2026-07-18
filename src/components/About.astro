@@ -1,15 +1,35 @@
 ---
+import { Image } from 'astro:assets';
+import abrazoCampo from '../assets/couple-7.jpg';
 ---
 
-<section id="nuestro-casamiento" class="bg-mist px-6 py-24 lg:py-[139px]">
-	<div class="mx-auto max-w-[731px]">
-		<h2 class="font-display text-[26px] font-semibold">Nuestro casamiento</h2>
-		<p class="mt-[43px] text-[19px] leading-normal tracking-[-0.01em] sm:text-[21px]">
-			Queremos compartir con vos uno de los días más importantes de nuestras vidas. El domingo 7 de
-			febrero, a las 19 hs, nos casamos y lo vamos a celebrar en el Salón Catering Tita, rodeados
-			de la gente que más queremos. Preparamos una noche para brindar, bailar y guardar recuerdos
-			que nos acompañen para siempre. Tu presencia es el mejor regalo: vení a ser parte de nuestra
-			historia.
-		</p>
+<section id="nuestro-casamiento" class="bg-porcelain px-6 py-24 lg:py-[132px]">
+	<div class="mx-auto grid max-w-[1120px] items-center gap-12 md:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+		<div class="relative order-2 md:order-1">
+			<div class="absolute -top-5 -left-5 hidden h-24 w-24 border-t border-l border-sage/70 md:block" aria-hidden="true"></div>
+			<div class="aspect-[4/5] overflow-hidden rounded-t-full border border-black/10 bg-mist">
+				<Image
+					src={abrazoCampo}
+					alt="Lucía sonriendo mientras abraza a Fausto en el campo"
+					class="h-full w-full object-cover object-[48%_44%]"
+					widths={[520, 760, 1040, 1400]}
+					sizes="(min-width: 768px) 42vw, 100vw"
+					quality={82}
+					loading="lazy"
+				/>
+			</div>
+		</div>
+
+		<div class="order-1 md:order-2">
+			<p class="text-[11px] tracking-[0.32em] uppercase text-sage">Nuestro casamiento</p>
+			<h2 class="mt-5 font-display text-[clamp(2.8rem,7vw,5.6rem)] leading-none font-light">
+				Una noche para celebrar juntos
+			</h2>
+			<p class="mt-9 max-w-[620px] text-[19px] leading-normal sm:text-[21px]">
+				El domingo 7 de febrero, a las 19 hs, nos casamos en el Salón Catering Tita. Queremos
+				compartirlo con las personas que más queremos, brindar, bailar y guardar recuerdos que nos
+				acompañen para siempre.
+			</p>
+		</div>
 	</div>
 </section>
