@@ -42,8 +42,8 @@ import retrato from '../assets/couple.jpg';
 			</a>
 		</div>
 
-		<div class="grid gap-4 sm:grid-cols-[0.78fr_1fr]">
-			<div class="aspect-[3/4] overflow-hidden rounded-t-full bg-mist">
+		<div class="grid gap-4 sm:grid-cols-[0.78fr_1fr] sm:items-stretch">
+			<div class="aspect-[3/4] overflow-hidden rounded-t-full bg-mist sm:aspect-auto sm:h-full">
 				<Image
 					src={retrato}
 					alt="Lucía y Fausto abrazados frente a frente bajo los árboles de un campo"
@@ -54,7 +54,7 @@ import retrato from '../assets/couple.jpg';
 					loading="lazy"
 				/>
 			</div>
-			<div class="aspect-[4/5] overflow-hidden rounded-[1.25rem] border border-black/10 bg-white sm:rounded-[1.75rem]">
+			<div class="aspect-[4/5] overflow-hidden rounded-[1.25rem] border border-black/10 bg-white sm:aspect-auto sm:min-h-[460px] sm:rounded-[1.75rem]">
 				<iframe
 					title="Mapa con la ubicación del evento: Salón Catering Tita, Ramallo"
 					src="https://www.google.com/maps?q=-33.494440,-59.991723&z=15&output=embed"
