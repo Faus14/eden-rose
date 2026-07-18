@@ -22,6 +22,8 @@ const {
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		{/* Invitación privada: no queremos que ninguna de las dos versiones aparezca en buscadores. */}
+		<meta name="robots" content="noindex, nofollow" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		{/*
