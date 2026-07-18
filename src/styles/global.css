@@ -26,6 +26,11 @@ body {
   background: #faf8f3;
 }
 
+/* Todas las fotos de la pareja van en blanco y negro (pedido de Lucía). */
+main img {
+  filter: grayscale(1);
+}
+
 ::selection {
   background: #d8b7ad;
   color: #000;
