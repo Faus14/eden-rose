@@ -1,4 +1,13 @@
 ---
+// Proyección aproximada según IPC esperado (REM BCRA): oct 1,8% · nov 1,7% · dic 1,6% · ene 1,8% · feb 1,7%
+const precios = [
+	{ mes: 'Septiembre', valor: '$71.000' },
+	{ mes: 'Octubre', valor: '$72.500' },
+	{ mes: 'Noviembre', valor: '$73.500' },
+	{ mes: 'Diciembre', valor: '$74.500' },
+	{ mes: 'Enero', valor: '$76.000' },
+	{ mes: 'Febrero', valor: '$77.500' },
+];
 ---
 
 <section id="tarjeta" class="bg-porcelain px-6 py-24 lg:py-[132px]">
@@ -8,15 +17,42 @@
 			Valor de la tarjeta
 		</h2>
 		<p class="mt-10 font-display text-[clamp(3rem,9vw,5.5rem)] leading-none font-light">
-			$65.000
+			$71.000
 		</p>
 		<p
 			class="mt-4 flex flex-col gap-2 text-[11px] tracking-[0.3em] uppercase text-ink/60 sm:flex-row sm:items-center sm:gap-4 sm:text-[13px]"
 		>
-			<span>Valor vigente</span>
+			<span>Valor vigente · septiembre</span>
 			<span class="hidden h-px w-8 bg-black sm:block sm:w-14" aria-hidden="true"></span>
 			<span>Se ajusta mes a mes por inflación (IPC) hasta febrero</span>
 		</p>
+
+		<div class="mt-10">
+			<p class="text-[11px] tracking-[0.3em] uppercase text-sage">Valor estimado mes a mes</p>
+			<table class="mt-4 w-full border-collapse text-left text-[17px] sm:text-[19px]">
+				<thead>
+					<tr class="border-b border-black/15 text-[11px] tracking-[0.3em] uppercase text-ink/60">
+						<th class="py-3 font-normal">Mes</th>
+						<th class="py-3 text-right font-normal">Valor aprox.</th>
+					</tr>
+				</thead>
+				<tbody>
+					{
+						precios.map(({ mes, valor }) => (
+							<tr class="border-b border-black/10">
+								<td class="py-3">{mes}</td>
+								<td class="py-3 text-right font-mono">{valor}</td>
+							</tr>
+						))
+					}
+				</tbody>
+			</table>
+			<p class="mt-4 text-[13px] leading-normal text-ink/60 sm:text-[14px]">
+				*Los valores arriba mencionados están expresados en pesos, los mismos son actuales y sujetos a
+				modificación de ajuste por inflación del IPC.
+			</p>
+		</div>
+
 		<p class="mt-8 text-[19px] leading-normal sm:text-[21px]">
 			Podés abonarla por transferencia al siguiente alias. Quienes quieran abonar con tarjeta de
 			crédito, escribinos en privado y armamos un link de pago.
