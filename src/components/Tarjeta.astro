@@ -1,13 +1,4 @@
 ---
-// Proyección aproximada según IPC esperado (REM BCRA): oct 1,8% · nov 1,7% · dic 1,6% · ene 1,8% · feb 1,7%
-const precios = [
-	{ mes: 'Septiembre', valor: '$71.000' },
-	{ mes: 'Octubre', valor: '$72.500' },
-	{ mes: 'Noviembre', valor: '$73.500' },
-	{ mes: 'Diciembre', valor: '$74.500' },
-	{ mes: 'Enero', valor: '$76.000' },
-	{ mes: 'Febrero', valor: '$77.500' },
-];
 ---
 
 <section id="tarjeta" class="bg-porcelain px-6 py-24 lg:py-[132px]">
@@ -28,26 +19,7 @@ const precios = [
 		</p>
 
 		<div class="mt-10">
-			<p class="text-[11px] tracking-[0.3em] uppercase text-sage">Valor estimado mes a mes</p>
-			<table class="mt-4 w-full border-collapse text-left text-[17px] sm:text-[19px]">
-				<thead>
-					<tr class="border-b border-black/15 text-[11px] tracking-[0.3em] uppercase text-ink/60">
-						<th class="py-3 font-normal">Mes</th>
-						<th class="py-3 text-right font-normal">Valor aprox.</th>
-					</tr>
-				</thead>
-				<tbody>
-					{
-						precios.map(({ mes, valor }) => (
-							<tr class="border-b border-black/10">
-								<td class="py-3">{mes}</td>
-								<td class="py-3 text-right font-mono">{valor}</td>
-							</tr>
-						))
-					}
-				</tbody>
-			</table>
-			<p class="mt-4 text-[13px] leading-normal text-ink/60 sm:text-[14px]">
+			<p class="text-[13px] leading-normal text-ink/60 sm:text-[14px]">
 				*Los valores arriba mencionados están expresados en pesos, los mismos son actuales y sujetos a
 				modificación de ajuste por inflación del IPC.
 			</p>
